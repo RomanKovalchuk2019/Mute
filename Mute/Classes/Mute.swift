@@ -50,9 +50,9 @@ public class Mute: NSObject {
     /// How frequently to check (seconds), minimum = 0.5
     public var checkInterval = 1.0 {
         didSet {
-            if self.checkInterval < 0.5 {
-                print("MUTE: checkInterval cannot be less than 0.5s, setting to 0.5")
-                self.checkInterval = 0.5
+            if self.checkInterval < 0.1 {
+                print("MUTE: checkInterval cannot be less than 0.1s, setting to 0.1")
+                self.checkInterval = 0.1
             }
         }
     }
